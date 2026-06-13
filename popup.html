@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <title>ربات لینا</title>
+  <link rel="stylesheet" href="popup.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-glow"></div>
+    <div class="logo">🤖 ربات ترکیبی لینا</div>
+    <div class="sub">مدیریت خودکار منابع و ساختمان‌های تراوین</div>
+    <div class="version-badge">v2.0</div>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <label class="label">🌍 آدرس سرور تراوین</label>
+      <div class="input-row">
+        <input id="serverUrl" class="input" placeholder="https://ts50.x5.international.travian.com"/>
+        <button id="saveServer" class="btn success">💾 ذخیره</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <button id="refresh" class="btn">📋 بروزرسانی</button>
+      <button id="start"   class="btn success">▶️ شروع</button>
+      <button id="stop"    class="btn danger">⏸️ توقف</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🏘️ دهکده‌ها</div>
+      <div id="villagesList" class="villages"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📡 وضعیت ربات</div>
+      <div id="statusBox" class="status">در انتظار شروع...</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🧾 گزارش فعالیت</div>
+      <div id="logs" class="logs"></div>
+    </div>
+
+  </main>
+
+  <footer>© گروه صنعتی لینا — نسخه ترکیبی 2.0</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

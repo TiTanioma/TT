@@ -1,0 +1,41 @@
+﻿{
+    "name":  "Lina Combined Bot",
+    "description":  "Auto-upgrade Travian resources and buildings with cycle control",
+    "version":  "2.0",
+    "manifest_version":  3,
+    "permissions":  [
+                        "storage",
+                        "tabs",
+                        "scripting",
+                        "activeTab"
+                    ],
+    "background":  {
+                       "service_worker":  "background.js"
+                   },
+    "action":  {
+                   "default_popup":  "popup.html"
+               },
+    "web_accessible_resources":  [
+                                     {
+                                         "resources":  [
+                                                           "page-bot.js"
+                                                       ],
+                                         "matches":  [
+                                                         "\u003call_urls\u003e"
+                                                     ]
+                                     }
+                                 ],
+    "content_scripts":  [
+                            {
+                                "matches":  [
+                                                "\u003call_urls\u003e"
+                                            ],
+                                "js":  [
+                                           "content_scripts/combined-bot.js",
+                                           "simple-remover.js",
+                                           "content_scripts/custom-adventure.js"
+                                       ],
+                                "run_at":  "document_idle"
+                            }
+                        ]
+}
